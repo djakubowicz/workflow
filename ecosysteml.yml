@@ -1,0 +1,3 @@
+- name: ecosystem installation
+  debug:
+    msg: "lancement de la partie ecosystem"

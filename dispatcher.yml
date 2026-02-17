@@ -1,0 +1,12 @@
+- name: Analyse des changements
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - set_fact:
+        files: "{{ ansible_webhook_payload.commits | map(attribute='modified') | flatten }}"
+
+    - set_stats:
+        data:
+          run_infra: "{{ 'infrastructure.tf' in files }}"
+          run_app: "{{ 'applications.tf' in files }}"
+          run_eco: "{{ 'ecosysteme.tf' in files }}"

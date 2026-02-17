@@ -1,3 +1,8 @@
-- name: tfe installation
-  debug:
-    msg: "lancement de la partie tfe"
+- name: tfe installation  
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Afficher un message dans les logs AAP
+      ansible.builtin.debug:
+        msg: "lancement de la partie tfe"

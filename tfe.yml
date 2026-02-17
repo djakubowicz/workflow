@@ -1,0 +1,3 @@
+- name: tfe installation
+  debug:
+    msg: "lancement de la partie tfe"

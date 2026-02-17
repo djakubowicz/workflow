@@ -1,0 +1,3 @@
+- name: config installation
+  debug:
+    msg: "lancement de la partie config"

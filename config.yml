@@ -1,3 +1,8 @@
 - name: config installation
-  debug:
-    msg: "lancement de la partie config"
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Afficher un message dans les logs AAP
+      ansible.builtin.debug:
+        msg: "lancement de la partie config"
